@@ -1,0 +1,14 @@
+{
+	"editor.tabSize": 2,
+	"editor.indentSize": "tabSize",
+	"editor.tabCompletion": "onlySnippets",
+	"editor.insertSpaces": false,
+
+	"prettier.tabWidth": 2,
+	"prettier.printWidth": 100,
+	"prettier.proseWrap": "never",
+	"prettier.trailingComma": "all",
+	"prettier.singleQuote": true,
+	"prettier.semi": true,
+	"prettier.useTabs": true
+}
