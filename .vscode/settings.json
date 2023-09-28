@@ -9,6 +9,6 @@
 	"prettier.proseWrap": "never",
 	"prettier.trailingComma": "all",
 	"prettier.singleQuote": true,
-	"prettier.semi": true,
+	"prettier.semi": false,
 	"prettier.useTabs": true
 }
