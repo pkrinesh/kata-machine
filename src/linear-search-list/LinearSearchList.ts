@@ -1,14 +1,14 @@
-export default function linear_search(haystack: number[], needle: number): boolean {
+export function linear_search(haystack: number[], needle: number): boolean {
 	for (let i = 0; i < haystack.length; ++i) {
 		if (haystack[i] === needle) {
-			return true;
+			return true
 		}
 	}
-	return false;
+	return false
 }
 
 /*
-	Linear search has O(N) Big-O complexity.
+	Linear search has O(N) Big-O time complexity, where `N` is the length of input
 */
 /*
 	Rules to remember for measuring big-o complexity.
