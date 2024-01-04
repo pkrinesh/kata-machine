@@ -24,7 +24,6 @@ export default class Stack<T> {
 
 		node.prev = this.head
 		this.head = node
-		console.log(this.head)
 	}
 
 	pop(): T | undefined {
