@@ -18,7 +18,7 @@ export default class Queue<T> {
 	 * @param item
 	 */
 	enqueue(item: T): void {
-		const node = { value: item } as Node<T>
+		let node: Node<T> = { value: item }
 		this.length++
 
 		if (!this.tail) {
@@ -35,24 +35,19 @@ export default class Queue<T> {
 	 * @returns
 	 */
 	deque(): T | undefined {
-		if (!this.head) {
-			return undefined
-		}
+		if (!this.head) return
 
 		this.length--
-		const currentHead = this.head
+		let currentHead = this.head
 
-		// now if the length is 0, then head and tail will be undefined
 		if (this.length === 0) {
 			this.head = this.tail = undefined
+		} else {
+			this.head = currentHead?.next
 		}
 
-		this.head = this.head?.next // new `head`
-
-		// free currentHead
-		currentHead.next = undefined
-
-		return currentHead.value
+		currentHead.next = undefined // free memory
+		return currentHead?.value
 	}
 
 	peek(): T | undefined {

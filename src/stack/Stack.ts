@@ -13,8 +13,7 @@ export default class Stack<T> {
 	}
 
 	push(item: T): void {
-		const node: Node<T> = { value: item }
-
+		let node: Node<T> = { value: item }
 		this.length++
 
 		if (!this.head) {
@@ -32,17 +31,16 @@ export default class Stack<T> {
 		}
 
 		this.length--
-		const currentHead = this.head
+		let currentHead = this.head
 
 		if (this.length === 0) {
 			this.head = undefined
+		} else {
+			this.head = currentHead?.prev
 		}
 
-		this.head = currentHead.prev
-
-		//free
-		currentHead.prev = undefined
-		return currentHead.value
+		currentHead.prev = undefined // free memory
+		return currentHead?.value
 	}
 
 	peek(): T | undefined {

@@ -19,6 +19,8 @@ export function binary_search(haystack: number[], needle: number): boolean {
 }
 
 /*
+	List must be sorted else we can't perform binary search.
+
 	It follows the [lo, hi), include `lo` and exclude the `hi`.
 	Binary search has O(log N) Big-O time complexity, where `N` is the length of input.
 
